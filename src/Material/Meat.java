@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 public class Meat extends Material{
-    double weight;
+    private double weight;
     Meat(){}
     Meat(double weight,String id,String name,LocalDate manufacturingDate, int cost){
         super(id,name,manufacturingDate,cost);
@@ -12,12 +12,12 @@ public class Meat extends Material{
     }
     @Override
     double getAmount() {
-        return super.cost*weight;
+        return super.getCost()*weight;
     }
 
     @Override
     LocalDate getExpiryDate() {
-        return super.manufacturingDate.plusDays(7);
+        return super.getManufacturingDate().plusDays(7);
     }
 
     @Override
@@ -27,12 +27,12 @@ public class Meat extends Material{
         if(daysToExpire<=5){
             discountRate=0.3;
         }else {discountRate=0.1;}
-        return (1-discountRate)*super.cost;
+        return (1-discountRate)*getAmount();
     }
 
     @Override
     public double getCostDiff() {
-        return super.cost-getRealMoney();
+        return getAmount()-getRealMoney();
     }
 
 }

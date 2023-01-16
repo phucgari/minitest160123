@@ -4,20 +4,29 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 public class CrispyFlour extends Material{
-    double quantity;
+    private double quantity;
     CrispyFlour(){}
     CrispyFlour(double quantity,String id,String name,LocalDate manufacturingDate, int cost){
         super(id,name,manufacturingDate,cost);
         this.quantity=quantity;
     }
+
+    public double getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(double quantity) {
+        this.quantity = quantity;
+    }
+
     @Override
     double getAmount() {
-        return quantity*super.cost;
+        return quantity*super.getCost();
     }
 
     @Override
     LocalDate getExpiryDate() {
-        return super.manufacturingDate.plusYears(1);
+        return super.getManufacturingDate().plusYears(1);
     }
 
     @Override
@@ -29,11 +38,11 @@ public class CrispyFlour extends Material{
         }else if(monthsToExpire<=4) {
             discountRate=0.2;
         }else {discountRate=0.05;}
-        return (1-discountRate)*super.cost;
+        return (1-discountRate)*getAmount();
     }
 
     @Override
     public double getCostDiff() {
-        return super.cost-getRealMoney();
+        return getAmount()-getRealMoney();
     }
 }

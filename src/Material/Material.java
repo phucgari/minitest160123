@@ -3,10 +3,10 @@ package Material;
 import java.time.LocalDate;
 
 public abstract class Material implements Discount {
-    String id="";
-    String name="";
-    LocalDate manufacturingDate;
-    int cost;
+    private String id="";
+    private String name="";
+    private LocalDate manufacturingDate;
+    private int cost;
     Material(){}
     Material(String i,String n,LocalDate m, int c){
         id=i;
