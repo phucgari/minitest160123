@@ -1,10 +1,15 @@
 package Material;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
-public class CrispyFlour extends Material implements Discount {
+public class CrispyFlour extends Material{
     double quantity;
-
+    CrispyFlour(){}
+    CrispyFlour(double quantity,String id,String name,LocalDate manufacturingDate, int cost){
+        super(id,name,manufacturingDate,cost);
+        this.quantity=quantity;
+    }
     @Override
     double getAmount() {
         return quantity*super.cost;
@@ -17,6 +22,18 @@ public class CrispyFlour extends Material implements Discount {
 
     @Override
     public double getRealMoney() {
-        return 0;
+        double discountRate=0;
+        int monthsToExpire=(int) ChronoUnit.MONTHS.between( LocalDate.now() , getExpiryDate() );
+        if(monthsToExpire<=2){
+            discountRate=0.4;
+        }else if(monthsToExpire<=4) {
+            discountRate=0.2;
+        }else {discountRate=0.05;}
+        return (1-discountRate)*super.cost;
+    }
+
+    @Override
+    public double getCostDiff() {
+        return super.cost-getRealMoney();
     }
 }

@@ -2,7 +2,7 @@ package Material;
 
 import java.time.LocalDate;
 
-public abstract class Material {
+public abstract class Material implements Discount {
     String id="";
     String name="";
     LocalDate manufacturingDate;
