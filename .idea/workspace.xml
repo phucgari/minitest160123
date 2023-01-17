@@ -7,10 +7,7 @@
     <list default="true" id="00c1a8d5-8fd1-4b30-8be2-b401f736b571" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Material/CrispyFlour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Material/CrispyFlour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Material/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Material/Material.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Material/MaterialManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Material/MaterialManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Material/Meat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Material/Meat.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +24,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -81,29 +79,15 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Material/MaterialManager.java</url>
-          <line>19</line>
-          <properties class="Material.MaterialManager" method="printRealCost">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Material/CrispyFlour.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Material/CrispyFlour.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
